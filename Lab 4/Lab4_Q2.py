@@ -78,7 +78,7 @@ def Postfix_Evaluate(s):
         elif s[i] == '-':
             num1 = myStack.pop()
             num2 = myStack.pop()
-            ans = int(num1) - int(num2)
+            ans = int(num2) - int(num1)
             myStack.push(ans)
         elif s[i] == '*':
             num1 = myStack.pop()
@@ -97,4 +97,4 @@ def Postfix_Evaluate(s):
 
 mystr = "10 2 8 * + 3 -"
 res = Postfix_Evaluate(mystr)
-print(res)  # res = 3 - ((2*8) + 10) = -23
+print(res)  # res = ((2*8) + 10) - 3= 23
